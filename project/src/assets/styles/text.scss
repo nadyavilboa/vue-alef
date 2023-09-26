@@ -1,0 +1,20 @@
+.text {
+    font-size: 14px;
+    line-height: 24px;
+    color: $text-black;
+}
+
+.text-link {
+    color: $text-grey;
+    text-decoration: none;
+}
+
+.text-grey {
+    font-size: 13px;
+    color: $text-grey;
+}
+
+.text-title {
+    font-size: 16px;
+    font-weight: 500;
+}
