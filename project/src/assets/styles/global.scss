@@ -6,6 +6,15 @@
     box-sizing: border-box;
 }
 
+html, body, #app {
+    height: 100%;
+}
+
+.app {
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+}
+
 img {
     width: 100%;
     height: auto;
@@ -14,4 +23,19 @@ img {
 h1, h2, h3, p, ul {
     margin: 0;
     padding: 0;
+}
+
+.input {
+    border: 1px solid $grey-border;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    padding: 8px 16px 6px;
+    width: 100%;
+
+    input,
+    input:focus-visible {
+        border: 0;
+        outline: none;
+    }
 }

@@ -1,0 +1,16 @@
+.blue-btn {
+    color: $blue-btn;
+}
+
+.blue-btn-border {
+    border: 2px solid $blue-btn;
+
+    svg {
+        fill: $blue-btn;
+    }
+}
+
+.blue-btn-bg {
+    background: $blue-btn;
+    color: $base-white;
+}
