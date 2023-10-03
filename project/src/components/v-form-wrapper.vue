@@ -1,5 +1,5 @@
 <template>
-    <div class="v-main-wrapper">
+    <div class="v-form-wrapper">
         <v-user-data />
         <v-children />
         <v-btn-save />
@@ -12,7 +12,7 @@
   import vBtnSave from './v-btn-save.vue';
   
   export default {
-    name: 'v-main-wrapper',
+    name: 'v-form-wrapper',
     components: {
         vUserData,
         vChildren,
@@ -22,7 +22,7 @@
   </script>
   
   <style>
-    .v-main-wrapper {
+    .v-form-wrapper {
         margin: 0 auto;
         padding: 0 20px;
         width: 100%;

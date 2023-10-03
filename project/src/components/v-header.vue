@@ -1,9 +1,9 @@
 <template>
     <div class="v-header">
         <div class="v-header__container">
-            <a
+            <router-link
+                :to="{ path: '/'}"
                 class="v-header__logotype"
-                href="#"
             >
                 <img
                     class="logo"
@@ -12,20 +12,20 @@
                     height="29"
                     alt="alef logotype"
                 />
-            </a>
+            </router-link>
             <nav class="v-header__menu">
-                <a
-                    class="v-header__link text text-link"
-                    href="#"
+                <router-link
+                    :to="{ path: '/'}"
+                    class="v-header__link text-link"
                 >
                     Форма
-                </a>
-                <a
-                    class="v-header__link text text-link"
-                    href="#"
+                </router-link>
+                <router-link
+                    :to="{ path: '/preview'}"
+                    class="v-header__link text-link"
                 >
                     Превью
-                </a>
+                </router-link>
             </nav>
         </div>
     </div>
