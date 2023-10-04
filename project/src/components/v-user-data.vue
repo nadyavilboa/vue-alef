@@ -7,11 +7,13 @@
             <v-input
                 textLabel="Имя"
                 inputName="userName"
+                :value="getActualUserData(USER).userName"
                 @changeInputVal="changeInputVal"
             />
             <v-input
                 textLabel="Возраст"
                 inputName="userAge"
+                :value="getActualUserData(USER).userAge"
                 @changeInputVal="changeInputVal"
             />
         </div>
@@ -31,14 +33,15 @@
         return {
             userData: {
                 userName: '',
-                userAge: 0
+                userAge: ''
             },
             saving: false
         }
     },
     computed: {
         ...mapGetters([
-            'SAVING'
+            'SAVING',
+            'USER'
         ])
     },
     methods: {
@@ -48,6 +51,13 @@
         changeInputVal(value, inputName) {
             this.userData[inputName] = value;
         },
+        getActualUserData(USER) {
+            if (USER && Object.keys(USER).length !== 0) {
+                return USER;
+            }
+
+            return this.userData;
+        }
     },
     created() {
         this.$store.subscribe(() => {

@@ -46,10 +46,18 @@
     },
     computed: {
       ...mapGetters([
-        'SAVING'
+        'SAVING',
+        'CHILDREN'
       ]),
       allowedAddingChild() {
           return this.children.length < MAX_AMOUNT_CHILDREN;
+      },
+      getActualArrayChildren(CHILDREN) {
+        if (CHILDREN && this.CHILDREN.length !== 0) {
+                return CHILDREN;
+            }
+
+        return this.children;
       }
     },
     methods: {

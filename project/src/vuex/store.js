@@ -29,8 +29,6 @@ const store = createStore({
             commit('SAVE_USER_DATA', dataObject)
         },
         SAVE_CHILDREN_DATA({commit}, childrenArray) {
-            console.log(this.state.children);
-            console.log(childrenArray);
             if (this.state.children.toString() === childrenArray.toString()) {
                 return;
             }
@@ -41,6 +39,12 @@ const store = createStore({
     getters: {
         SAVING(state) {
             return state.dataSaving
+        },
+        USER(state) {
+            return state.userData
+        },
+        CHILDREN(state) {
+            return state.children
         }
     },
 });
